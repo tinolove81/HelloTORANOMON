@@ -14,7 +14,15 @@ body {
 }
 
 body {
+    position: relative;
     background-color: #F4F4F4;
+}
+
+p.desp {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 20px;
 }
 
 .nav {
@@ -31,13 +39,11 @@ body {
 }
 
 .container {
-    padding: 0 10px;
     margin-right: auto;
     margin-left: auto;
     width: 100%;
 
     .main-view {
-        margin-bottom: 20px;
         padding-top: 26px;
         width: 100%;
         height: 590px;
@@ -72,7 +78,7 @@ body {
 
     .main-move {
         display: flex;
-        margin-bottom: 20px;
+        margin-top: 20px;
         width: 100%;
         box-shadow: 0px 1px 1px #D8D8D8BF;
         flex-wrap: wrap;
@@ -100,6 +106,155 @@ body {
             align-items: center;
         }
     }
+
+    .main-content {
+        position: relative;
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        .content {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+            background-color: #FFFFFF;
+            box-shadow: 0px 1px 1px #D8D8D8BF;
+            flex-direction: column;
+
+            h3 {
+                display: flex;
+                margin: 10px 0 25px 0;
+                font-size: 22px;
+                line-height: 17px;
+                font-weight: 200;
+                align-items: center;
+
+                img {
+                    margin-right: 14px;
+                    width: 30px;
+                    vertical-align: text-bottom;
+                }
+            }
+
+            &.location {
+                position: relative;
+                padding: 10px 20px 15px 20px;
+
+
+                .map {
+                    width: 100%;
+                    height: 100%;
+
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                        min-width: 449px;
+                        min-height: 268px;
+                        border: 0;
+                    }
+                }
+            }
+
+            &.telfex {
+                display: flex;
+                padding: 35px 0 40px;
+                color: #FFFFFF;
+                background-color: #846AB4;
+                justify-content: center;
+                align-items: center;
+
+                h3 {
+                    margin-bottom: 40px;
+
+                    img {
+                        width: 19px;
+                    }
+                }
+
+                .tel {
+                    margin-bottom: 20px;
+                    font-size: 40px;
+                    letter-spacing: 3.5px;
+                    font-weight: 100;
+                }
+            }
+
+            &.about {
+                padding: 18px 20px;
+
+                h3 img {
+                    margin-right: 8px;
+                    width: 44px;
+                }
+
+                .tora {
+                    margin-bottom: 23px;
+                }
+            }
+
+            &.gourmet {
+                padding: 10px;
+                color: #FFFFFF;
+                background-color: #DC5E48;
+
+                h3 {
+                    margin-bottom: 35px;
+
+                    img {
+                        margin: 0 auto;
+                        width: 307.5px;
+                    }
+
+                }
+
+                .isakaya,
+                .ramen {
+                    margin-bottom: 10px;
+                    padding-left: 25px;
+
+                    &>p {
+                        margin-bottom: 5px;
+                    }
+                    &>div {
+                        display: flex;
+                        align-items: baseline;
+
+                        span.number {
+                            font-size: 32px;
+                        }
+
+                        span.ken {
+                            font-size: 12px;
+                            font-weight: 200;
+                        }
+                        img {
+                            display: block;
+                            margin: 0 22px 0 auto;
+
+                        }
+                    }
+                }
+
+                .ps {
+                    font-size: 9px;
+                    font-weight: lighter;
+                    letter-spacing: 0.45px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+.information {
+    margin: 40px auto 20px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 32px;
+    letter-spacing: 3.6px;
 }
 
 .footer {
@@ -143,6 +298,15 @@ body {
             .main-move-white {
                 width: 54%;
                 line-height: 36px;
+            }
+
+        }
+
+        .main-content {
+            position: relative;
+
+            .content {
+                width: calc(50% - 10px);
             }
         }
     }

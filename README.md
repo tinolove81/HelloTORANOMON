@@ -5,4 +5,9 @@ JavaScript のご経験があれば、モーダルウィンドウなど実装で
 提出期限 ： 2023 年 11 月 15 日（水） 10:00 まで
 
 ## Memo
-    TODO water fall
+- [X] TODO water fall
+    - Layout (4/6)
+    - Sort action
+- [ ] フォトギャラリー Photo gallery
+    - Model dialog
+- [ ] Company link
