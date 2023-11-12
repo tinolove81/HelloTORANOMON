@@ -1,43 +1,48 @@
 const RWDWIDTH = 1200;
 let WIDTH = window.innerWidth;
 
+let wf;
+
 window.onresize = () => {
     WIDTH = window.innerWidth;
-    WIDTH > RWDWIDTH ? waterfall('.main-content.waterfall', '.content') : false;
+    wf.reset();
 }
 
 window.onload = () => {
-
-    WIDTH > RWDWIDTH ? waterfall('.main-content.waterfall', '.content') : false;
+    wf = new waterfall('.maincontent.waterfall', '.content');
+    wf.reset();
 }
 
 function waterfall(par, elem) {
-    const RWDCONTENTWIDTH = 1000;
-    const space = 20;
+    this.RWDCONTENTWIDTH = 1000;
+    this.space = 20;
 
-    let parents = document.querySelector(par);
-    let child = document.querySelectorAll(elem, par);
-    let childHeightArray = [];
-    let colHeight = [0, 0];
+    this.parents = document.querySelector(par);
+    this.child = document.querySelectorAll(elem, par);
+    this.childHeightArray = [];
+    this.colHeight = [0, 0];
 
-    let parentsWidth = parents.offsetWidth;
-    if (parentsWidth >= RWDCONTENTWIDTH) {
-        childHeightArray = [...child].map(x => x.offsetHeight);
-        colHeight[0] = childHeightArray[0] + space;
-        colHeight[1] = childHeightArray[1] + space;
+    console.log('P', this.parents);
+    console.log('C', this.child);
+    console.log('W', this.childHeightArray);
 
-        for (let i = 2; i < child.length; i++) {
-            const element = child[i];
+    this.reset = function () {
+        if (WIDTH >= RWDWIDTH && this.parents.offsetWidth >= this.RWDCONTENTWIDTH) {
+            this.childHeightArray = [...this.child].map(x => x.offsetHeight);
+            this.colHeight = [this.childHeightArray[0] + this.space, 0];
             
+            for (let i = 1; i < this.child.length; i++) {
+                let dom = this.child[i];
+                let minColHeight = Math.min(...this.colHeight);
+                let minColIdx = this.colHeight.indexOf(minColHeight);
+                dom.style.transform = 'translate(' + (490 + this.space) * minColIdx + 'px, ' + minColHeight + 'px)';
+                this.colHeight[minColIdx] += this.childHeightArray[i] + this.space;
+            }
+            this.parents.style.height = Math.max(...this.colHeight) + 'px';
+        } else {
+            [...this.child].map(c => c.style.transform = '');
+            this.parents.style.height = '';
         }
-
-
-
-
-
     }
 
-    console.log('P', parents);
-    console.log('C', child);
-    console.log('W', childHeightArray);
 }

@@ -19,10 +19,14 @@ body {
 }
 
 p.desp {
-    margin: 0 0 10px 0;
+    margin: 0 auto 10px auto;
     font-size: 12px;
     font-weight: 200;
     line-height: 20px;
+}
+
+img {
+    display: block;
 }
 
 .nav {
@@ -40,10 +44,11 @@ p.desp {
 
 .container {
     margin-right: auto;
+    margin-bottom: 72px;
     margin-left: auto;
     width: 100%;
 
-    .main-view {
+    .buildingview {
         padding-top: 26px;
         width: 100%;
         height: 590px;
@@ -76,14 +81,14 @@ p.desp {
         }
     }
 
-    .main-move {
+    .addressmove {
         display: flex;
         margin-top: 20px;
         width: 100%;
         box-shadow: 0px 1px 1px #D8D8D8BF;
         flex-wrap: wrap;
 
-        .main-move-green {
+        .addressmove-green {
             display: flex;
             width: 100%;
             height: 260px;
@@ -92,7 +97,7 @@ p.desp {
             align-items: center;
         }
 
-        .main-move-white {
+        .addressmove-white {
             display: flex;
             padding: 50px 40px;
             width: 100%;
@@ -107,7 +112,7 @@ p.desp {
         }
     }
 
-    .main-content {
+    .maincontent {
         position: relative;
         display: flex;
         margin-top: 20px;
@@ -118,7 +123,7 @@ p.desp {
         .content {
             display: flex;
             margin-bottom: 20px;
-            padding: 10px;
+            padding: 10px 20px 15px 20px;
             width: 100%;
             background-color: #FFFFFF;
             box-shadow: 0px 1px 1px #D8D8D8BF;
@@ -132,17 +137,15 @@ p.desp {
                 font-weight: 200;
                 align-items: center;
 
-                img {
+                img.icon {
                     margin-right: 14px;
-                    width: 30px;
+                    height: 30px;
                     vertical-align: text-bottom;
                 }
             }
 
             &.location {
                 position: relative;
-                padding: 10px 20px 15px 20px;
-
 
                 .map {
                     width: 100%;
@@ -160,22 +163,17 @@ p.desp {
 
             &.telfex {
                 display: flex;
-                padding: 35px 0 40px;
+                padding: 25px 0 40px;
                 color: #FFFFFF;
                 background-color: #846AB4;
                 justify-content: center;
                 align-items: center;
 
                 h3 {
-                    margin-bottom: 40px;
-
-                    img {
-                        width: 19px;
-                    }
+                    margin-bottom: 30px;
                 }
 
                 .tel {
-                    margin-bottom: 20px;
                     font-size: 40px;
                     letter-spacing: 3.5px;
                     font-weight: 100;
@@ -183,8 +181,6 @@ p.desp {
             }
 
             &.about {
-                padding: 18px 20px;
-
                 h3 img {
                     margin-right: 8px;
                     width: 44px;
@@ -192,6 +188,11 @@ p.desp {
 
                 .tora {
                     margin-bottom: 23px;
+                    text-align: center;
+
+                    img {
+                        margin: auto;
+                    }
                 }
             }
 
@@ -218,6 +219,7 @@ p.desp {
                     &>p {
                         margin-bottom: 5px;
                     }
+
                     &>div {
                         display: flex;
                         align-items: baseline;
@@ -230,6 +232,7 @@ p.desp {
                             font-size: 12px;
                             font-weight: 200;
                         }
+
                         img {
                             display: block;
                             margin: 0 22px 0 auto;
@@ -245,16 +248,123 @@ p.desp {
                     text-align: right;
                 }
             }
+
+            &.gallery {
+                .album {
+                    display: flex;
+                    width: 100%;
+
+                    .first {
+                        margin-right: 1px;
+                        width: 75%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .secend {
+                        display: flex;
+                        width: calc(25% - 1px);
+                        flex-direction: column;
+
+                        .ry {
+                            width: 100%;
+
+                            &:not(:last-child) {
+                                margin-bottom: 1px;
+                            }
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.pickup {
+                padding: 31px 19px 23px 20px;
+                background-color: #E9BC06;
+
+                h3 {
+                    margin-bottom: 30px;
+
+                    img {
+                        margin: 0 auto;
+                    }
+
+                }
+
+                .mise {
+                    display: flex;
+                    color: #FFFFFF;
+                    justify-content: center;
+
+                    .photo {
+                        margin-right: 20px;
+                    }
+
+                    .text {
+                        h5 {
+                            margin: 0 0 0 0;
+                            font-size: 18px;
+                            font-weight: 200;
+                            line-height: 20px;
+                            letter-spacing: -0.45px;
+                        }
+
+                        p {
+                            font-size: 12px;
+                            font-weight: 200;
+                            line-height: 20px;
+                            letter-spacing: -0.3px;
+                        }
+                    }
+                }
+            }
         }
     }
-}
 
-.information {
-    margin: 40px auto 20px;
-    text-align: center;
-    font-size: 36px;
-    line-height: 32px;
-    letter-spacing: 3.6px;
+    .information {
+        margin: 40px auto 20px;
+        text-align: center;
+        font-size: 26px;
+        line-height: 22px;
+        letter-spacing: 2px;
+    }
+
+    .companylink a {
+        display: flex;
+        margin: 0;
+        padding: 30px 0 34px 0;
+        width: 100%;
+        height: 100%;
+        color: #000000;
+        font-size: 17px;
+        line-height: 17px;
+        letter-spacing: 0px;
+        background-color: #FFFFFF;
+        background-image: -webkit-image-set(url(../img/arrow.png) 1x, url(../img/arrow@2x.png) 2x);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 14px), 50%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &:not(:hover) {
+            text-decoration: none;
+        }
+
+        img {
+            margin-right: 34px;
+        }
+
+        p {
+            margin: 0;
+            padding: 5px 0 0 0;
+        }
+    }
 }
 
 .footer {
@@ -264,21 +374,30 @@ p.desp {
     font-size: 14px;
     line-height: 16.5px;
     letter-spacing: 0.7px;
+    background-color: #CCCCCC;
     justify-content: center;
     align-items: center;
-    background-color: #CCCCCC;
+}
+
+.waterfall {
+    position: relative;
+
+    .content {
+        position: relative;
+    }
 }
 
 
 
-
-
 @media (min-width: 1200px) {
+    p.desp {
+        margin: 0 0 10px 0;
+    }
 
     .container {
         max-width: 1000px;
 
-        .main-view {
+        .buildingview {
             .main-title {
                 font-size: 25px;
 
@@ -289,25 +408,41 @@ p.desp {
             }
         }
 
-        .main-move {
-
-            .main-move-green {
+        .addressmove {
+            .addressmove-green {
                 width: 46%;
             }
 
-            .main-move-white {
+            .addressmove-white {
                 width: 54%;
                 line-height: 36px;
             }
 
         }
 
-        .main-content {
+        .maincontent {
             position: relative;
 
             .content {
                 width: calc(50% - 10px);
             }
+        }
+
+        .information {
+            font-size: 36px;
+            line-height: 32px;
+            letter-spacing: 3.6px;
+        }
+    }
+
+    .waterfall {
+        position: relative;
+
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: translate .5s ease-in-out;
         }
     }
 }
