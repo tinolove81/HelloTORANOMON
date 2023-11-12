@@ -9,9 +9,10 @@ JavaScript のご経験があれば、モーダルウィンドウなど実装で
 - [X] Waterfall
     - [X] Layout (6/6)
     - [X] Sort action
-- [ ] フォトギャラリー Photo gallery
+- [X] フォトギャラリー Photo gallery
     - [X] Layout
-    - [ ] Model dialog
+    - [X] Model dialog
 - [X] Company link
 - [ ] RWD Check
-- [ ] テスト
+- [X] テスト
+- [ ] Feature
