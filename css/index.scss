@@ -134,7 +134,7 @@ img {
                 display: flex;
                 margin: 10px 0 25px 0;
                 font-size: 22px;
-                line-height: 17px;
+                line-height: 22px;
                 font-weight: 200;
                 align-items: center;
 
@@ -165,7 +165,7 @@ img {
 
             &.telfex {
                 display: flex;
-                padding: 25px 0 40px;
+                padding: 25px 12px 40px 12px;
                 color: #FFFFFF;
                 background-color: #846AB4;
                 justify-content: center;
@@ -173,12 +173,6 @@ img {
 
                 h3 {
                     margin-bottom: 30px;
-                }
-
-                .tel {
-                    font-size: 40px;
-                    letter-spacing: 3.5px;
-                    font-weight: 100;
                 }
             }
 
@@ -333,7 +327,7 @@ img {
         margin: 40px auto 20px;
         text-align: center;
         font-size: 26px;
-        line-height: 22px;
+        line-height: 36px;
         letter-spacing: 2px;
     }
 
@@ -345,7 +339,7 @@ img {
         height: 100%;
         color: #000000;
         font-size: 17px;
-        line-height: 17px;
+        line-height: 22px;
         letter-spacing: 0px;
         background-color: #FFFFFF;
         background-image: -webkit-image-set(url(../img/arrow.png) 1x, url(../img/arrow@2x.png) 2x);
